@@ -18,12 +18,12 @@ else
 fi
 
 # Ensure httpd is running
-if ! pgrep -f "httpd -p .*8090" >/dev/null; then
-    echo "[*] Launching Web UI server on port 8090..."
-    /data/adb/magisk/busybox httpd -p 0.0.0.0:8090 -h "$WEB_DIR" -c "$WEB_DIR/httpd.conf"
+if ! pgrep -f "httpd -p .*8091" >/dev/null; then
+    echo "[*] Launching Web UI server on port 8091..."
+    /data/adb/magisk/busybox httpd -p 0.0.0.0:8091 -h "$WEB_DIR" -c "$WEB_DIR/httpd.conf"
     sleep 1
 else
-    echo "[✓] Web UI server is active on port 8090."
+    echo "[✓] Web UI server is active on port 8091."
 fi
 
 # Ensure ACC daemon is alive
@@ -36,10 +36,10 @@ fi
 
 echo ""
 echo "[*] Opening Battery Control Panel in Chrome..."
-am start -a android.intent.action.VIEW -d "http://127.0.0.1:8090" -f 0x14000000 >/dev/null 2>&1
+am start -a android.intent.action.VIEW -d "http://127.0.0.1:8091" -f 0x14000000 >/dev/null 2>&1
 
 echo ""
 echo "[✓] Web Control Panel launched successfully!"
-echo "    Direct URL: http://127.0.0.1:8090"
+echo "    Direct URL: http://127.0.0.1:8091"
 echo "=========================================="
 exit 0

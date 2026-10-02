@@ -50,11 +50,11 @@ BUSYBOX="/data/adb/magisk/busybox"
 [ -x "$BUSYBOX" ] || BUSYBOX="/data/adb/ksu/bin/busybox"
 [ -x "$BUSYBOX" ] || BUSYBOX="busybox"
 
-if ! pgrep -f "httpd -p .*8090" >/dev/null; then
-    $BUSYBOX httpd -p 0.0.0.0:8090 -h "$WEB_DIR" -c "$WEB_DIR/httpd.conf" >> $LOG 2>&1
-    echo "[$(date)] ACC Web UI listening on port 8090" >> $LOG
+if ! pgrep -f "httpd -p .*8091" >/dev/null; then
+    $BUSYBOX httpd -p 0.0.0.0:8091 -h "$WEB_DIR" -c "$WEB_DIR/httpd.conf" >> $LOG 2>&1
+    echo "[$(date)] ACC Web UI listening on port 8091" >> $LOG
 else
-    echo "[$(date)] ACC Web UI already running on port 8090" >> $LOG
+    echo "[$(date)] ACC Web UI already running on port 8091" >> $LOG
 fi
 
 exit 0

@@ -325,9 +325,9 @@ if [ -d "$installDir/web" ]; then
   set_perms_recursive $installDir/web 0
   chmod -R 0755 $installDir/web/cgi-bin 2>/dev/null || :
   chmod 0644 $installDir/web/index.html $installDir/web/httpd.conf 2>/dev/null || :
-  pkill -f "httpd -p .*8090" 2>/dev/null || :
-  /data/adb/magisk/busybox httpd -p 0.0.0.0:8090 -h $installDir/web -c $installDir/web/httpd.conf 2>/dev/null || :
-  echo "- Web Control Panel active on port 8090 (http://127.0.0.1:8090)"
+  pkill -f "httpd -p .*8091" 2>/dev/null || :
+  /data/adb/magisk/busybox httpd -p 0.0.0.0:8091 -h $installDir/web -c $installDir/web/httpd.conf 2>/dev/null || :
+  echo "- Web Control Panel active on port 8091 (http://127.0.0.1:8091)"
 fi
 
 exit 0

@@ -3,6 +3,6 @@ name=ACC Battery Master & Web Control Panel
 version=v2.0
 versionCode=200
 author=hoc & VR-25
-description=Created by hoc & VR-25. Intelligent battery charge controller with 90% cutoff / 60% auto-resume hysteresis, Hardware Power Bypass (direct charger power), and touch-friendly Web Control Panel on port 8090.
+description=Created by hoc & VR-25. Intelligent battery charge controller with 90% cutoff / 60% auto-resume hysteresis, Hardware Power Bypass (direct charger power), and touch-friendly Web Control Panel on port 8091.
 actionTitle=Open Battery Control Panel
 minMagisk=24000
