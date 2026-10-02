@@ -1,0 +1,5 @@
+# SELinux permissions for Battery Control & MediaTek PMIC commands
+allow magisk sysfs_battery file { read write open getattr }
+allow magisk sysfs_battery dir { read open search }
+allow magisk proc_battery_cmd file { read write open getattr }
+allow magisk proc_battery_cmd dir { read open search }
